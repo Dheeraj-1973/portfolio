@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dheeraj Nallamotu</title>
+  <meta name="description" content="Dheeraj Nallamotu, final-year B.Tech CSE (Honors) student specializing in AI. Human-in-the-loop systems, NLP, and backend engineering.">
+  <meta name="author" content="Dheeraj Nallamotu">
+
+  <!-- Social preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dheeraj Nallamotu">
+  <meta property="og:description" content="Human-in-the-loop systems, NLP, and backend engineering. Applying to MS in Computer Science programs for Fall 2027.">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="wordmark" href="#intro">Dheeraj Nallamotu</a>
+      <nav class="nav" aria-label="Sections">
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="button button-small" href="assets/Dheeraj_Nallamotu_Resume.pdf" target="_blank" rel="noopener">Résumé</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ========== INTRO ========== -->
+    <section id="intro" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1>I build software that knows when to hand a decision to a person.</h1>
+          <p class="lede">
+            I'm a final-year B.Tech student in Computer Science and Engineering (Honors) at KL University,
+            specializing in Artificial Intelligence. My projects explore human-in-the-loop systems:
+            when automation should go ahead on its own, and when a human should review the decision.
+          </p>
+          <p class="lede">
+            I'm applying to MS in Computer Science programs in the United States for Fall 2027.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="assets/Dheeraj_Nallamotu_Resume.pdf" target="_blank" rel="noopener">View résumé</a>
+            <a class="button button-quiet" href="mailto:dheerajnallamotu@gmail.com">Email me</a>
+          </div>
+          <dl class="hero-facts">
+            <div><dt>CGPA</dt><dd>9.34 / 10</dd></div>
+            <div><dt>Research</dt><dd>First-author paper accepted at ICACTCE '26</dd></div>
+            <div><dt>Graduating</dt><dd>May 2027</dd></div>
+          </dl>
+        </div>
+
+        <!-- Interactive illustration of the capstone's PROCEED / ESCALATE flow -->
+        <figure class="demo" aria-labelledby="demo-title">
+          <figcaption id="demo-title" class="demo-title">How an escalation decision works</figcaption>
+          <p class="demo-hint">Pick a request to see which checks it passes.</p>
+
+          <div class="demo-requests" role="radiogroup" aria-label="Example requests" id="demo-requests">
+            <!-- Buttons are rendered by js/main.js -->
+          </div>
+
+          <div class="demo-trace" aria-live="polite">
+            <p class="demo-request" id="demo-request"></p>
+            <ol class="demo-checks" id="demo-checks"></ol>
+            <div class="demo-outcome" id="demo-outcome"></div>
+          </div>
+
+          <p class="demo-note">
+            An illustration of the decision flow in my capstone project, with hand-written examples.
+            It is not live output from the system.
+          </p>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ========== WORK ========== -->
+    <section id="work" class="section">
+      <div class="container section-grid">
+        <h2 class="section-title">Research and projects</h2>
+
+        <div class="section-body">
+
+          <!-- FreshGuard -->
+          <article class="project project-feature">
+            <header class="project-head">
+              <h3>FreshGuard</h3>
+              <p class="project-sub">Human-in-the-loop decision support for environmental risk assessment in perishable-food shelf-life monitoring</p>
+              <p class="project-meta">
+                <span>Team lead and prototype developer</span>
+                <span class="tag tag-paper">First-author paper accepted at ICACTCE '26 (Paper ID 128)</span>
+              </p>
+            </header>
+
+            <p>
+              Perishable food can spoil when temperature and humidity drift, and automated alerts are only
+              useful if someone is accountable for acting on them. FreshGuard flags risky batches and keeps
+              a person in charge of every alert.
+            </p>
+
+            <ol class="flow" aria-label="How FreshGuard processes readings">
+              <li class="flow-step">
+                <span class="flow-label">Simulated readings</span>
+                <span class="flow-detail">Temperature and humidity for each batch</span>
+              </li>
+              <li class="flow-step">
+                <span class="flow-label">Rule-based assessment</span>
+                <span class="flow-detail">Environmental stress per batch</span>
+              </li>
+              <li class="flow-step">
+                <span class="flow-label">Batch status</span>
+                <span class="flow-detail">
+                  <span class="status status-ok">Healthy</span>
+                  <span class="status status-warn">Warning</span>
+                  <span class="status status-crit">Critical</span>
+                </span>
+              </li>
+              <li class="flow-step">
+                <span class="flow-label">One open alert</span>
+                <span class="flow-detail">An existing unresolved alert of the same severity is reused</span>
+              </li>
+              <li class="flow-step">
+                <span class="flow-label">Human review</span>
+                <span class="flow-detail">Accept, Reject or Escalate</span>
+              </li>
+            </ol>
+
+            <h4>What I built</h4>
+            <ul class="points">
+              <li>Led the team and developed the working web prototype: a FastAPI backend, SQLAlchemy with SQLite for storage, and an HTML, CSS and JavaScript interface.</li>
+              <li>Implemented the rule-based environmental-stress assessment that classifies each batch as Healthy, Warning or Critical.</li>
+              <li>Implemented alert deduplication, so a batch with an unresolved alert of the same severity reuses it instead of creating another.</li>
+              <li>Built the review step where a person accepts, rejects or escalates each alert.</li>
+            </ul>
+
+            <h4>Prototype evaluation</h4>
+            <dl class="facts">
+              <div><dt>4</dt><dd>sample batches</dd></div>
+              <div><dt>5,961</dt><dd>simulated sensor readings</dd></div>
+              <div><dt>8</dt><dd>alert records: 1 active Critical, 3 active Warning, 4 resolved</dd></div>
+            </dl>
+            <p class="fine-print">
+              Readings were simulated; no physical sensors were used. These are recorded prototype results,
+              not a validated prediction of shelf life.
+            </p>
+
+            <p class="stack"><span class="stack-label">Built with</span> Python, FastAPI, SQLAlchemy, SQLite, HTML, CSS, JavaScript</p>
+          </article>
+
+          <!-- Capstone -->
+          <article class="project project-feature">
+            <header class="project-head">
+              <h3>Human-in-the-Loop Escalation Architecture for NLU Deployments</h3>
+              <p class="project-sub">B.Tech capstone project</p>
+              <p class="project-meta">
+                <span>Team lead</span>
+                <span class="tag">In progress</span>
+              </p>
+            </header>
+
+            <p>
+              Conversational systems misread requests, and some mistakes are expensive to undo. This system
+              evaluates each request and decides whether to <strong class="word-proceed">proceed</strong> with
+              automated processing or <strong class="word-escalate">escalate</strong> it to a human reviewer.
+              The example at the top of this page shows the idea.
+            </p>
+
+            <div class="decision-map" aria-label="Decision checks and supported domains">
+              <div>
+                <h4>Checks on every request</h4>
+                <ul class="plain-list">
+                  <li>Confidence of the language understanding</li>
+                  <li>Risk of the requested operation</li>
+                  <li>Presence and validity of critical entities</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Designed for four domains</h4>
+                <ul class="plain-list">
+                  <li>Travel and airline services</li>
+                  <li>Food ordering</li>
+                  <li>E-commerce</li>
+                  <li>Appointment scheduling</li>
+                </ul>
+              </div>
+            </div>
+
+            <h4>My part</h4>
+            <ul class="points">
+              <li>Lead the team and coordinate the work.</li>
+              <li>Built the FastAPI backend and the decision logic that combines confidence checks, operation-risk checks and critical-entity validation.</li>
+              <li>Implemented the human-review workflow.</li>
+              <li>Contributed to the SQLAlchemy database integration and to connecting the backend APIs with the frontend for request evaluation, escalation handling and evaluation history.</li>
+            </ul>
+
+            <p class="stack"><span class="stack-label">Built with</span> Python, FastAPI, Pydantic, SQLAlchemy, PostgreSQL, SQLite, Uvicorn</p>
+          </article>
+
+          <!-- CrewAI -->
+          <article class="project project-compact">
+            <header class="project-head">
+              <h3>Collaborative Agents Using CrewAI</h3>
+              <p class="project-meta"><span>Developer</span></p>
+            </header>
+            <p>
+              A multi-agent workflow where a coordinating agent delegates work to three specialized agents and
+              combines their responses into one output.
+            </p>
+            <div class="agents" aria-label="Agent structure">
+              <span class="agent agent-lead">Coordinating agent</span>
+              <span class="agent">Content generation</span>
+              <span class="agent">Question answering</span>
+              <span class="agent">Summarization</span>
+            </div>
+            <p class="stack"><span class="stack-label">Built with</span> Python, CrewAI, LangChain agents</p>
+          </article>
+
+          <p class="more-link">
+            More of my code is on <a href="https://github.com/Dheeraj-1973" target="_blank" rel="noopener">GitHub</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== EXPERIENCE ========== -->
+    <section id="experience" class="section">
+      <div class="container section-grid">
+        <h2 class="section-title">Experience</h2>
+        <div class="section-body">
+          <article class="entry">
+            <header class="entry-head">
+              <div>
+                <h3>Python Full Stack Development Intern</h3>
+                <p class="entry-org">TrekVerse, remote</p>
+              </div>
+              <p class="entry-date">Jun 2026 – Sep 2026</p>
+            </header>
+            <ul class="points">
+              <li>Built a task-management web application in FastAPI with CRUD REST endpoints that return structured JSON.</li>
+              <li>Stored data with SQLAlchemy on SQLite, and handled bad input with Pydantic validation, exception handling and appropriate HTTP status codes.</li>
+              <li>Developed the frontend with Jinja2, HTML, CSS and JavaScript, connected to the backend APIs.</li>
+            </ul>
+            <p class="stack"><span class="stack-label">Built with</span> Python, FastAPI, Pydantic, SQLAlchemy, SQLite, Jinja2, HTML, CSS, JavaScript</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== EDUCATION ========== -->
+    <section id="education" class="section">
+      <div class="container section-grid">
+        <h2 class="section-title">Education</h2>
+        <div class="section-body">
+          <article class="entry">
+            <header class="entry-head">
+              <div>
+                <h3>KL University</h3>
+                <p class="entry-org">B.Tech in Computer Science and Engineering (Honors), specialization in Artificial Intelligence</p>
+              </div>
+              <p class="entry-date">Aug 2023 – May 2027 (expected)</p>
+            </header>
+            <p class="score">CGPA 9.34 / 10</p>
+            <p class="coursework">
+              <span class="stack-label">Relevant coursework</span>
+              Data Structures and Algorithms, Object-Oriented Programming, Database Management Systems,
+              Machine Learning, Deep Learning, Natural Language Processing
+            </p>
+          </article>
+
+          <article class="entry">
+            <header class="entry-head">
+              <div>
+                <h3>Narayana Junior College</h3>
+                <p class="entry-org">Intermediate, Mathematics, Physics and Chemistry (MPC)</p>
+              </div>
+              <p class="entry-date">May 2021 – Apr 2023</p>
+            </header>
+            <p class="score">CGPA 9.68 / 10</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SKILLS ========== -->
+    <section id="skills" class="section">
+      <div class="container section-grid">
+        <h2 class="section-title">Skills and certifications</h2>
+        <div class="section-body">
+          <dl class="skills">
+            <div><dt>Programming and backend</dt><dd>Python, SQL, JavaScript, FastAPI, REST APIs, Pydantic, SQLAlchemy, Uvicorn</dd></div>
+            <div><dt>AI, ML and NLP</dt><dd>Generative AI, large language models, natural language processing, retrieval-augmented generation</dd></div>
+            <div><dt>AI agents</dt><dd>Multi-agent systems, CrewAI, LangChain agents</dd></div>
+            <div><dt>Databases</dt><dd>PostgreSQL, SQLite, MongoDB, ChromaDB</dd></div>
+            <div><dt>Web development</dt><dd>HTML, CSS, JavaScript, Jinja2, Streamlit</dd></div>
+            <div><dt>Cloud and tools</dt><dd>AWS, Oracle Cloud Infrastructure, Microsoft Azure, Git, GitHub</dd></div>
+          </dl>
+
+          <div class="cert-block">
+          <h3 class="sub-title">Certifications</h3>
+          <ul class="certs">
+            <li><span class="cert-issuer">AWS</span> AWS Certified Data Engineer – Associate</li>
+            <li><span class="cert-issuer">AWS</span> AWS Certified Cloud Practitioner</li>
+            <li><span class="cert-issuer">Oracle</span> Oracle Cloud Infrastructure 2025 Certified Generative AI Professional</li>
+            <li><span class="cert-issuer">Microsoft</span> Microsoft Certified: Azure Fundamentals (AZ-900)</li>
+          </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== CONTACT ========== -->
+  <footer id="contact" class="contact">
+    <div class="container section-grid">
+      <h2 class="section-title">Contact</h2>
+      <div class="section-body">
+        <p class="contact-lede">I'm glad to talk about graduate study, research, or any of these projects.</p>
+        <a class="contact-email" href="mailto:dheerajnallamotu@gmail.com">dheerajnallamotu@gmail.com</a>
+        <ul class="contact-links">
+          <li><a href="https://github.com/Dheeraj-1973" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/nallamotu-dheeraj-06868b346/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="assets/Dheeraj_Nallamotu_Resume.pdf" target="_blank" rel="noopener">Résumé (PDF)</a></li>
+        </ul>
+        <p class="copyright">© <span id="year">2026</span> Dheeraj Nallamotu</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
